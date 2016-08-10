@@ -1,0 +1,19 @@
+import numpy as np
+import cv2
+img = cv2.imread('messi5.jpg')
+px = img[100,100]
+px = [237,239,142]
+print px
+print img.shape
+print img.size
+print img.dtype
+ball = img[280:340, 330:390]
+#img[273:333, 100:160] = ball
+#img[:,:,2]=0
+#img = cv2.copyMakeBorder(img,20,20,20,20,cv2.BORDER_CONSTANT,value=[255,0,0])
+img1 = cv2.imread('messi5.jpg')
+img2 = cv2.imread('messi5.jpg')
+dst = cv2.addWeighted(img1,0.7,img2,0.3,0)
+cv2.imshow('dst',dst)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
